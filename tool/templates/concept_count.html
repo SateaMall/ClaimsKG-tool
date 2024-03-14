@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Concept Counts</title>
+</head>
+<body>
+    <h1>Concept Counts in the Knowledge Graph</h1>
+    <table>
+        <tr>
+            <th>Type</th>
+            <th>Count</th>
+        </tr>
+        {% for concept in concepts %}
+            <tr>
+                <td>{{ concept.type }}</td>
+                <td>{{ concept.count }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

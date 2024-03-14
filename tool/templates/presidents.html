@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Presidents Claims</title>
+</head>
+<body>
+    <h1>Claims Related to Presidents of the United States from the Democratic Party</h1>
+    <ul>
+        {% for item in data %}
+            <li>
+                <strong>Text:</strong> {{ item.text }}<br>
+                <strong>Review URL:</strong> <a href="{{ item.reviewurl }}">{{ item.reviewurl }}</a><br>
+                <strong>President:</strong> {{ item.President }}
+            </li>
+        {% empty %}
+            <li>No claims found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

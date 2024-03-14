@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coronavirus Claims in 2020</title>
+</head>
+<body>
+    <h1>Claims Related to Coronavirus in 2020</h1>
+    <ul>
+        {% for item in data %}
+            <li>
+                <strong>Text:</strong> {{ item.text }}<br>
+                <strong>Date:</strong> {{ item.date }}<br>
+                <strong>Review URL:</strong> <a href="{{ item.reviewurl }}">{{ item.reviewurl }}</a><br>
+                <strong>Rating Name:</strong> {{ item.ratingName }}
+            </li>
+        {% empty %}
+            <li>No claims found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

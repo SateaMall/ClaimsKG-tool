@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mixed Claims from Politifact</title>
+</head>
+<body>
+    <h1>Mixed Claims from Politifact</h1>
+    <ul>
+        {% for item in data %}
+            <li>
+                <strong>Text:</strong> {{ item.text }}<br>
+                <strong>Review URL:</strong> <a href="{{ item.reviewurl }}">{{ item.reviewurl }}</a>
+            </li>
+        {% empty %}
+            <li>No claims found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
