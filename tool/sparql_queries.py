@@ -46,6 +46,7 @@ def fetch_claims_presidents():
     }
     """)
     sparql.setReturnFormat(JSON)
+    
     results = sparql.query().convert()
 
     claims_data = []
