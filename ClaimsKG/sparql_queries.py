@@ -34,7 +34,7 @@ def fetch_claims_presidents():
 		PREFIX dbo: <http://dbpedia.org/ontology/>
 		PREFIX nee: <http://www.ics.forth.gr/isl/oae/core#>
 		PREFIX dc: <http://purl.org/dc/terms/>
-    SELECT DISTINCT ?text ?reviewurl ?President 
+    SELECT DISTINCT ?text ?reviewurl ?President ?ratingName
     WHERE { 
     SERVICE <http://dbpedia.org/sparql> 
     {?President <http://dbpedia.org/property/office> "President of the United States"@en .
